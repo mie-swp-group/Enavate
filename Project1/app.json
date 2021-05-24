@@ -1,0 +1,24 @@
+{
+    "id": "7e1b0e47-064c-4f6b-9cc0-3f7838acee4d",
+    "name": "Project1",
+    "publisher": "Default publisher",
+    "version": "1.0.0.0",
+    "brief": "",
+    "description": "",
+    "privacyStatement": "",
+    "EULA": "",
+    "help": "",
+    "url": "",
+    "logo": "",
+    "dependencies": [],
+    "screenshots": [],
+    "platform": "1.0.0.0",
+    "application": "18.0.0.0",
+    "idRanges": [{
+        "from": 50100,
+        "to": 50149
+    }],
+    "contextSensitiveHelpUrl": "https://Project1.com/help/",
+    "showMyCode": true,
+    "runtime": "7.0"
+}
