@@ -43,9 +43,9 @@ page 50100 "Radio Show List"
                 {
                     ApplicationArea = Basic;
                 }
-                field("Advertaising Rvenue";
+                field("Advertaising Revenue";
                 Rec.
-                    "Advertaising Rvenue")
+                    "Advertaising Revenue")
                 {
                     ApplicationArea = Basic;
                 }

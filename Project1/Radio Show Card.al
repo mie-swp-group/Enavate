@@ -43,9 +43,9 @@ page 50101 "Radio Show Card"
                 {
                     ApplicationArea = Basic;
                 }
-                field("Advertaising Rvenue";
+                field("Advertaising Revenue";
                 Rec.
-                    "Advertaising Rvenue")
+                    "Advertaising Revenue")
                 {
                     ApplicationArea = Basic;
                 }

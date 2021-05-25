@@ -10,7 +10,7 @@ table 50100 "Radio Show"
         field(60; "Host Name"; Text[50]) { }
         field(100; "Average Listeners"; Decimal) { }
         field(110; "Audience Share"; Decimal) { }
-        field(120; "Advertaising Rvenue"; Decimal) { }
+        field(120; "Advertaising Revenue"; Decimal) { }
         field(130; "Royalty Cost"; Decimal) { }
     }
 }
