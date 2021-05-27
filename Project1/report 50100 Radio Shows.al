@@ -3,6 +3,8 @@ report 50100 "Radio Shows"
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = Basic;
     WordLayout = 'RadioShows.docx';
+    DefaultLayout = Word;
+
     dataset
     {
         dataitem(DataItemName; "Radio Show")
