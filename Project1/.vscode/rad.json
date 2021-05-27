@@ -1,1 +1,1 @@
-﻿{"Added":[],"Modified":[],"Removed":[]}
+﻿{"Added":[{"Id":50100,"Kind":16,"Name":"CustomerListExt","PackagePath":"/src/HelloWorld.al"}],"Modified":[{"Id":50100,"Kind":13,"Name":"Radio Shows","PackagePath":"/src/report%2050100%20Radio%20Shows.al"}],"Removed":[{"Id":50100,"Kind":12,"Name":"Radio Show List","PackagePath":"/src/page/page%2050100%20Radio%20Show%20list.al"},{"Id":50101,"Kind":12,"Name":"Radio Show Card","PackagePath":"/src/page/page%2050101%20Radio%20Show%20Card.al"}]}
