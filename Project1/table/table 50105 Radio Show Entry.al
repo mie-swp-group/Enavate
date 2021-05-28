@@ -14,6 +14,11 @@ table 50105 "Radio Show Entry"
         field(90; "Fee Amount"; Decimal) { }
         field(100; "ACSAP ID"; Integer) { }
         field(120; "Publisher Code"; Code[10]) { }
-
+    }
+    keys
+    {
+        key(PK; "Entry No.") { Clustered = true; }
+        key(Reporting; "Radio Show No.", Date) { SumIndexFields = "Fee Amount"; }
+        key(Reporting2; Type, "No.", Date) { SumIndexFields = "Fee Amount"; }
     }
 }
