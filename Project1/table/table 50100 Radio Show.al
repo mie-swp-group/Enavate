@@ -3,7 +3,7 @@ table 50100 "Radio Show"
     fields
     {
         field(1; "No."; Code[20]) { }
-        field(10; "Radio Show Type"; Code[10]) { }
+        field(10; "Radio Show Type"; Code[10]) { TableRelation = "Radio Show Type"; }
         field(20; "Name"; Text[50]) { }
         field(40; "Run Time"; Duration) { }
         field(50; "Host Code"; Code[20]) { }
