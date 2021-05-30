@@ -1,0 +1,26 @@
+{
+  "id": "22aaccd5-f76b-42ae-a4e0-73f6b806e6dc",
+  "name": "Credit Limit",
+  "publisher": "Default publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://CreditLimit.com/help/",
+  "showMyCode": true,
+  "runtime": "7.0"
+}
