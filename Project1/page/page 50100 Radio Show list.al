@@ -48,9 +48,14 @@ page 50100 "Radio Show List"
                 {
                     ApplicationArea = Basic;
                 }
-                //  {
-                //     ApplicationArea = All;
-
+            }
+        }
+        area(FactBoxes)
+        {
+            part(Fans; "Radio Show Fan Factbox")
+            {
+                ApplicationArea = Basic;
+                SubPageLink = "Radio Show No." = field("No.");
             }
         }
     }
