@@ -11,6 +11,7 @@ page 50101 "Radio Show Card"
             {
                 field("No."; Rec."No.") { ApplicationArea = Basic; }
                 field("Radio Show Type"; Rec."Radio Show Type") { ApplicationArea = Basic; }
+
                 field("Name"; Rec."Name")
                 {
                     ApplicationArea = Basic;
@@ -31,6 +32,10 @@ page 50101 "Radio Show Card"
                 {
                     ApplicationArea = Basic;
                 }
+            }
+            group(Ruquirements) { }
+            group(Statistics)
+            {
                 field("Average Listeners";
                 Rec.
                     "Average Listeners")
