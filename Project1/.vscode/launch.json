@@ -8,8 +8,13 @@
             "type": "al",
             "environmentType": "Sandbox",
             "environmentName": "Academy",
-           // "startupObjectId": 50100,
-           // "startupObjectType": "Page",
+<<<<<<< Updated upstream
+            "startupObjectId": 50101,
+           "startupObjectType": "Page",
+=======
+          // "startupObjectId": 50100,
+          // "startupObjectType": "Page",
+>>>>>>> Stashed changes
             "breakOnError": true,
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
