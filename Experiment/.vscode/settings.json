@@ -8,7 +8,7 @@
         "${UICop}" 
     ],
    // "CRS.ObjectNamePrefix": "BCAcademy ",
-    "CRS.FileNamePattern": "<ObjectTypeShort><ObjectId>.<ObjectNameShort>.al",
+    "CRS.FileNamePattern": "<ObjectType><ObjectId>.<ObjectName>.al",
     "CRS.FileNamePatternExtensions": "<ObjectType>.<ObjectId>.<BaseNameShort>.al",
     "CRS.OnSaveAlFileAction": "Rename",
     "git.enableSmartCommit": true,
