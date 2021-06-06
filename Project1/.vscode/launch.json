@@ -8,7 +8,11 @@
             "type": "al",
             "environmentType": "Sandbox",
             "environmentName": "Academy",
+<<<<<<< HEAD
             "startupObjectId": 22,
+=======
+            "startupObjectId": 50141,
+>>>>>>> ccaa733cc02a0c82202de63cc6954c755f82874f
            "startupObjectType": "Page",
             "breakOnError": true,
             "launchBrowser": true,

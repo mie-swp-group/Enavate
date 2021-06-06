@@ -3,7 +3,7 @@
     "configurations": [
         
         {
-            "name": "Academy",
+            "name": "Experiment",
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
