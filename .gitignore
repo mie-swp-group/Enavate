@@ -1,2 +1,7 @@
 Experiment/.vscode/launch.json
 Project1/.vscode/launch.json
+.alpackages/
+.altemplates/
+.alcache/
+.vscode/
+*.app
