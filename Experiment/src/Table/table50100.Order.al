@@ -16,7 +16,6 @@ table 50100 "Order"
         {
             Caption = 'Description';
             DataClassification = CustomerContent;
-            TableRelation = Addition;
         }
         field(3; "Customer No."; Code[20])
         {

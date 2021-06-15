@@ -1,8 +1,9 @@
 table 50100 "Rental Sales Header"
 {
     Caption = 'Rental Sales Header';
-    DataClassification = ToBeClassified;
-
+    DataClassification = CustomerContent;
+    LookupPageId = "Rental Sales Header";
+    DrillDownPageId = "Rental Sales Header";
     fields
     {
         field(1; "Doc. No."; Code[20])
@@ -20,9 +21,9 @@ table 50100 "Rental Sales Header"
             Caption = 'Customer No.';
             DataClassification = CustomerContent;
         }
-        field(4; "Order Date"; Date)
+        field(4; "Posting Date"; Date)
         {
-            Caption = 'Order Date';
+            Caption = 'Posting Date';
             DataClassification = CustomerContent;
         }
     }

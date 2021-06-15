@@ -2,7 +2,9 @@ table 50101 "Rental Sales Line"
 {
     Caption = 'Rental Sales Line';
     DataClassification = ToBeClassified;
-    
+    LookupPageId = "Rental Sales Line";
+    DrillDownPageId = "Rental Sales Line";
+
     fields
     {
         field(1; "LIne No."; Code[20])
@@ -38,5 +40,5 @@ table 50101 "Rental Sales Line"
             Clustered = true;
         }
     }
-    
+
 }
