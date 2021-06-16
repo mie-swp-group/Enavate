@@ -6,8 +6,8 @@ page 50101 "RentalSalesLine Part"
     SourceTable = "Rental Sales Line";
     UsageCategory = Administration;
     ApplicationArea = all;
-    PopulateAllFields = true;
-    AutoSplitKey = true;
+    // PopulateAllFields = true;
+    //AutoSplitKey = true;
 
     layout
     {

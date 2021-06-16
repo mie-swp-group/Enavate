@@ -6,15 +6,17 @@ table 50100 "Rental Sales Header"
     DrillDownPageId = "Rental Sales Header";
     fields
     {
-        field(1; "Doc. No."; Code[20])
+        field(1; "Order No."; Code[20])
         {
-            Caption = 'Doc. No.';
+            Caption = 'Order No.';
             DataClassification = CustomerContent;
         }
-        field(2; "Salesperson No."; Code[20])
+        field(2; "Salesperson Name"; Code[20])
         {
-            Caption = 'Salesperson No.';
+            Caption = 'Salesperson Name';
             DataClassification = CustomerContent;
+            TableRelation = "Salesperson/Purchaser"."No.";
+
         }
         field(3; "Customer No."; Code[20])
         {
@@ -29,7 +31,7 @@ table 50100 "Rental Sales Header"
     }
     keys
     {
-        key(PK; "Doc. No.")
+        key(PK; "Order No.")
         {
             Clustered = true;
         }

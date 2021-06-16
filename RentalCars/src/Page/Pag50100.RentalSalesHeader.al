@@ -12,12 +12,12 @@ page 50100 "Rental Sales Header"
         {
             repeater(General)
             {
-                field("Doc. No."; Rec."Doc. No.")
+                field("Order No."; Rec."Order No.")
                 {
                     ToolTip = 'Specifies the value of the Doc. No. field';
                     ApplicationArea = All;
                 }
-                field("Salesperson No."; Rec."Salesperson No.")
+                field("Salesperson Name"; Rec."Salesperson Name")
                 {
                     ToolTip = 'Specifies the value of the Salesperson No. field';
                     ApplicationArea = All;

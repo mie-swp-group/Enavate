@@ -2,9 +2,9 @@ tableextension 50100 "Rental Car" extends Item
 {
     fields
     {
-        field(50100; Model; Text[50])
+        field(50100; "Model,Year"; Text[50])
         {
-            Caption = 'Model';
+            Caption = 'Model,Year';
             DataClassification = CustomerContent;
         }
         field(50101; Color; Text[20])
@@ -22,7 +22,7 @@ tableextension 50100 "Rental Car" extends Item
             Caption = 'Seats';
             DataClassification = CustomerContent;
         }
-        field(50104; "Fuel type"; Text[20])
+        field(50104; "Fuel type"; Text[10])
         {
             Caption = 'Fuel type';
             DataClassification = CustomerContent;
@@ -32,5 +32,34 @@ tableextension 50100 "Rental Car" extends Item
             Caption = 'Mileage';
             DataClassification = CustomerContent;
         }
+        field(50106; "Fuel Cons./100km"; Text[20])
+        {
+            Caption = 'Fuel Cons./100km';
+            DataClassification = CustomerContent;
+        }
+        field(50107; "Price/1 day"; Integer)
+        {
+            Caption = 'Price/1 day';
+            DataClassification = CustomerContent;
+        }
+        field(50108; "Doors"; Integer)
+        {
+            Caption = 'Doors';
+            DataClassification = CustomerContent;
+        }
+        field(50109; "Trunk Vol./Bags"; Text[30])
+        {
+            Caption = 'Trunk Vol./Bags';
+            DataClassification = CustomerContent;
+        }
+
+    }
+    keys
+    {
+        key(PK; "Model,Year")
+        {
+
+        }
     }
 }
+

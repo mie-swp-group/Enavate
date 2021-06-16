@@ -13,12 +13,12 @@ page 50102 "Rental Sales Card"
         {
             group(General)
             {
-                field("Doc. No."; Rec."Doc. No.")
+                field("Order No."; Rec."Order No.")
                 {
                     ToolTip = 'Specifies the value of the Doc. No. field';
                     ApplicationArea = All;
                 }
-                field("Salesperson No."; Rec."Salesperson No.")
+                field("Salesperson Name"; Rec."Salesperson Name")
                 {
                     ToolTip = 'Specifies the value of the Salesperson No. field';
                     ApplicationArea = All;
@@ -36,7 +36,7 @@ page 50102 "Rental Sales Card"
             }
             part("RentalSalesLine Part"; "RentalSalesLine Part")
             {
-                SubPageLink = "LIne No." = field("Doc. No.");
+                SubPageLink = "LIne No." = field("Order No.");
                 ApplicationArea = all;
                 UpdatePropagation = Both;
             }

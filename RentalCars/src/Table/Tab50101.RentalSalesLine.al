@@ -1,7 +1,7 @@
 table 50101 "Rental Sales Line"
 {
     Caption = 'Rental Sales Line';
-    DataClassification = ToBeClassified;
+    DataClassification = CustomerContent;
     LookupPageId = "Rental Sales Line";
     DrillDownPageId = "Rental Sales Line";
 
