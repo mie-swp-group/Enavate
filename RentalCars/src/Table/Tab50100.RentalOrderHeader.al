@@ -1,9 +1,9 @@
-table 50100 "Rental Sales Header"
+table 50100 "Rental Order Header"
 {
-    Caption = 'Rental Sales Header';
+    Caption = 'Rental Order Header';
     DataClassification = CustomerContent;
-    LookupPageId = "Rental Sales Header";
-    DrillDownPageId = "Rental Sales Header";
+    LookupPageId = "Rental Order Header";
+    DrillDownPageId = "Rental Order Header";
     fields
     {
         field(1; "Order No."; Code[20])

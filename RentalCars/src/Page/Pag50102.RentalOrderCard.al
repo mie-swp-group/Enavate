@@ -1,16 +1,17 @@
-page 50100 "Rental Sales Header"
+page 50102 "Rental Order Card"
 {
-    Caption = 'Rental Sales Header';
-    PageType = List;
-    SourceTable = "Rental Sales Header";
-    CardPageId = "Rental Sales Card";
+
+    Caption = 'Rental Order';
+    PageType = Card;
+    SourceTable = "Rental Order Header";
     UsageCategory = Lists;
-    ApplicationArea = All;
+    ApplicationArea = all;
+
     layout
     {
         area(content)
         {
-            repeater(General)
+            group(General)
             {
                 field("Order No."; Rec."Order No.")
                 {
@@ -32,6 +33,12 @@ page 50100 "Rental Sales Header"
                     ToolTip = 'Specifies the value of the Posting Date field';
                     ApplicationArea = All;
                 }
+            }
+            part("RentalSalesLine Part"; "RentalSalesLine Part")
+            {
+                SubPageLink = "LIne No." = field("Order No.");
+                ApplicationArea = all;
+                UpdatePropagation = Both;
             }
         }
     }

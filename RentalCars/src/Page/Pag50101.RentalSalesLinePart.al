@@ -1,9 +1,9 @@
 page 50101 "RentalSalesLine Part"
 {
 
-    Caption = 'RentalSalesLine Part';
+    Caption = 'Rental Order Line Part';
     PageType = ListPart;
-    SourceTable = "Rental Sales Line";
+    SourceTable = "Rental Order Line";
     UsageCategory = Administration;
     ApplicationArea = all;
     // PopulateAllFields = true;

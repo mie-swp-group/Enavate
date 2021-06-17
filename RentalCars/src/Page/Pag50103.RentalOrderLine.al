@@ -1,8 +1,8 @@
-page 50103 "Rental Sales Line"
+page 50103 "Rental Order Line"
 {
-    Caption = 'Rental Sales Line';
+    Caption = 'Rental Orders';
     PageType = List;
-    SourceTable = "Rental Sales Line";
+    SourceTable = "Rental Order Line";
     UsageCategory = Administration;
     ApplicationArea = All;
 

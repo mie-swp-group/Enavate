@@ -1,12 +1,12 @@
-page 50104 "Rental Car"
+page 50104 "Rental Cars"
 {
 
     ApplicationArea = All;
-    Caption = 'Rental Car';
+    Caption = 'Rental Cars';
     PageType = List;
     SourceTable = Item;
-    UsageCategory = Administration;
-    CardPageId = "Rental Car Card";
+    UsageCategory = Lists;
+    CardPageId = "Rental Cars Card";
     Editable = false;
 
     layout

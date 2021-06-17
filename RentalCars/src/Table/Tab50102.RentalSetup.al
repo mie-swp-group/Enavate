@@ -1,11 +1,11 @@
-table 50102 "Setup"
+table 50102 "Rental Setup"
 {
-    Caption = 'Setup';
+    Caption = 'Rental Setup';
     DataClassification = CustomerContent;
 
     fields
     {
-        field(1; "Primary Key"; Code[10])
+        field(1; "Code"; Code[10])
         {
             Caption = 'Code';
             DataClassification = CustomerContent;
@@ -14,17 +14,19 @@ table 50102 "Setup"
         {
             Caption = 'Order Nos.';
             DataClassification = CustomerContent;
+            TableRelation = "No. Series";
         }
         field(3; "Posted Order Nos."; Code[20])
         {
             Caption = 'Posted Order Nos.';
             DataClassification = CustomerContent;
+            TableRelation = "No. Series";
         }
     }
 
     keys
     {
-        key(PK; "Primary Key")
+        key(PK; "Code")
         {
             Clustered = true;
         }

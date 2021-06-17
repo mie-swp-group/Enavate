@@ -1,7 +1,7 @@
-page 50105 "Rental Car Card"
+page 50105 "Rental Cars Card"
 {
 
-    Caption = 'Rental Car';
+    Caption = 'Rental Cars';
     PageType = Card;
     SourceTable = Item;
     UsageCategory = Lists;
