@@ -36,7 +36,7 @@ page 50102 "Rental Order Card"
             }
             part("RentalSalesLine Part"; "RentalSalesLine Part")
             {
-                SubPageLink = "LIne No." = field("Order No.");
+                SubPageLink = "No." = field("Order No.");
                 ApplicationArea = all;
                 UpdatePropagation = Both;
             }

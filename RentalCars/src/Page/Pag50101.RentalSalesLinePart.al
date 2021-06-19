@@ -1,7 +1,7 @@
 page 50101 "RentalSalesLine Part"
 {
 
-    Caption = 'Rental Order Line Part';
+    Caption = 'Lines';
     PageType = ListPart;
     SourceTable = "Rental Order Line";
     UsageCategory = Administration;
@@ -15,9 +15,9 @@ page 50101 "RentalSalesLine Part"
         {
             repeater(General)
             {
-                field("LIne No."; Rec."LIne No.")
+                field("No."; Rec."No.")
                 {
-                    ToolTip = 'Specifies the value of the LIne No. field';
+                    ToolTip = 'Specifies the value of the No. field';
                     ApplicationArea = All;
                 }
                 field("Item No."; Rec."Item No.")

@@ -1,11 +1,13 @@
-page 50105 "Rental Cars Card"
+page 50105 "Cars Card"
 {
 
-    Caption = 'Rental Cars';
+    Caption = 'Car specifications';
+    DataCaptionExpression = '';
     PageType = Card;
     SourceTable = Item;
-    UsageCategory = Lists;
+    UsageCategory = Documents;
     ApplicationArea = all;
+
 
     layout
     {
@@ -13,6 +15,11 @@ page 50105 "Rental Cars Card"
         {
             group(General)
             {
+                field("No."; Rec."No.")
+                {
+                    ToolTip = 'Specifies the value of the No. field';
+                    ApplicationArea = All;
+                }
                 field("Model,Year"; Rec."Model,Year")
                 {
                     ToolTip = 'Specifies the value of the Model,Year field';
@@ -25,6 +32,7 @@ page 50105 "Rental Cars Card"
                 }
                 field(Transmission; Rec.Transmission)
                 {
+                    Caption = 'Gearbox';
                     ToolTip = 'Specifies the value of the Transmission field';
                     ApplicationArea = All;
                 }
@@ -57,14 +65,24 @@ page 50105 "Rental Cars Card"
                 {
                     ToolTip = 'Specifies the value of the Mileage field';
                     ApplicationArea = All;
-                }
-                field("Price/1 day"; Rec."Price/1 day")
-                {
-                    ToolTip = 'Specifies the value of the Price/1 day field';
-                    ApplicationArea = All;
+
+
                 }
             }
         }
-    }
+        area(factboxes)
+        {
+            part(ItemPicture; "Item Picture")
+            {
+                ApplicationArea = All;
+                Caption = 'Picture';
+                SubPageLink = "No." = FIELD("No.");
+            }
+            // part(ItemAttributesFactbox; "Item Attributes Factbox")
+            // {
+            //     ApplicationArea = Basic, Suite;
+            // }
+        }
 
+    }
 }

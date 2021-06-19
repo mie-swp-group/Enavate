@@ -7,9 +7,9 @@ table 50101 "Rental Order Line"
 
     fields
     {
-        field(1; "LIne No."; Code[20])
+        field(1; "No."; Code[20])
         {
-            Caption = 'LIne No.';
+            Caption = 'No.';
             DataClassification = CustomerContent;
         }
         field(2; "Item No."; Code[20])
@@ -35,7 +35,7 @@ table 50101 "Rental Order Line"
     }
     keys
     {
-        key(PK; "LIne No.")
+        key(PK; "No.")
         {
             Clustered = true;
         }

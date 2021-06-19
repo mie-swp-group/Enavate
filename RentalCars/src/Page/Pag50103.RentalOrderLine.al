@@ -12,9 +12,9 @@ page 50103 "Rental Order Line"
         {
             repeater(General)
             {
-                field("LIne No."; Rec."LIne No.")
+                field("No."; Rec."No.")
                 {
-                    ToolTip = 'Specifies the value of the LIne No. field';
+                    ToolTip = 'Specifies the value of the No. field';
                     ApplicationArea = All;
                 }
                 field("Item No."; Rec."Item No.")

@@ -1,20 +1,24 @@
-page 50104 "Rental Cars"
+page 50104 "Cars"
 {
 
     ApplicationArea = All;
-    Caption = 'Rental Cars';
+    Caption = 'Cars';
     PageType = List;
     SourceTable = Item;
     UsageCategory = Lists;
-    CardPageId = "Rental Cars Card";
+    CardPageId = "Cars Card";
     Editable = false;
-
     layout
     {
         area(content)
         {
             repeater(General)
             {
+                field("No."; Rec."No.")
+                {
+                    ToolTip = 'Specifies the value of the No. field';
+                    ApplicationArea = All;
+                }
                 field("Model,Year"; Rec."Model,Year")
                 {
                     ToolTip = 'Specifies the value of the Model,Year field';
@@ -27,6 +31,7 @@ page 50104 "Rental Cars"
                 }
                 field(Transmission; Rec.Transmission)
                 {
+                    Caption = 'Gearbox';
                     ToolTip = 'Specifies the value of the Transmission field';
                     ApplicationArea = All;
                 }
@@ -60,9 +65,10 @@ page 50104 "Rental Cars"
                     ToolTip = 'Specifies the value of the Mileage field';
                     ApplicationArea = All;
                 }
-                field("Price/1 day"; Rec."Price/1 day")
+                field("Unit Price"; Rec."Unit Price")
                 {
-                    ToolTip = 'Specifies the value of the Price/1 day field';
+                    Caption = 'Price per day';
+                    ToolTip = 'Specifies the value of the Unit Price field';
                     ApplicationArea = All;
                 }
             }
