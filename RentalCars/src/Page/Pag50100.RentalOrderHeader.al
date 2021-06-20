@@ -6,13 +6,14 @@ page 50100 "Rental Order Header"
     CardPageId = "Rental Order Card";
     UsageCategory = Lists;
     ApplicationArea = All;
+
     layout
     {
         area(content)
         {
             repeater(General)
             {
-                field("Order No."; Rec."Order No.")
+                field("No."; Rec."No.")
                 {
                     ToolTip = 'Specifies the value of the Doc. No. field';
                     ApplicationArea = All;

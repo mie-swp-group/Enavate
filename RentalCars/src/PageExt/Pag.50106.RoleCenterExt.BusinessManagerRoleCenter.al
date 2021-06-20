@@ -9,7 +9,7 @@ pageextension 50106 "RoleCenterExt" extends "Business Manager Role Center"
             {
                 Caption = 'Rental';
                 ToolTip = 'Make rental orders, find cars for rent';
-                action(RentalCar)
+                action(Cars)
                 {
                     ApplicationArea = Basic, Suite;
                     Caption = 'Cars';
@@ -20,6 +20,12 @@ pageextension 50106 "RoleCenterExt" extends "Business Manager Role Center"
                     ApplicationArea = Basic, Suite;
                     Caption = 'Rental Orders';
                     RunObject = page "Rental Order Line";
+                }
+                action("Rental Customers")
+                {
+                    ApplicationArea = Basic, Suite;
+                    Caption = 'Customers';
+                    RunObject = page "Rental Customers";
                 }
 
 
