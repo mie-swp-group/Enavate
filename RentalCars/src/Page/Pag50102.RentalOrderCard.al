@@ -3,7 +3,7 @@ page 50102 "Rental Order Card"
 
     Caption = 'Rental Order';
     PageType = Card;
-    SourceTable = "Rental Order Header";
+    SourceTable = "Rental Order";
     UsageCategory = Lists;
     ApplicationArea = all;
 
@@ -17,17 +17,18 @@ page 50102 "Rental Order Card"
                 {
                     ToolTip = 'Specifies the value of the No. field';
                     ApplicationArea = All;
+                    Editable = false;
                 }
-                field("Customer No."; Rec."Customer No.")
-                {
-                    ToolTip = 'Specifies the value of the Customer No. field';
-                    ApplicationArea = All;
+                // field("Customer No."; Rec."Customer No.")
+                // {
+                //     ToolTip = 'Specifies the value of the Customer No. field';
+                //     ApplicationArea = All;
 
-                    trigger OnValidate()
-                    begin
-                        CurrPage.Update(true);
-                    end;
-                }
+                //     trigger OnValidate()
+                //     begin
+                //         CurrPage.Update(true);
+                //     end;
+                // }
                 field("Customer Name"; Rec."Customer Name")
                 {
                     ApplicationArea = Basic, Suite;

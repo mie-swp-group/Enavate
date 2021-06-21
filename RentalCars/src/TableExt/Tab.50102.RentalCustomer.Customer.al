@@ -6,7 +6,7 @@ tableextension 50102 "Rental Customer" extends Customer
         {
             Caption = 'Discount';
             DataClassification = CustomerContent;
-            // InitValue = 1;
+
         }
     }
 }

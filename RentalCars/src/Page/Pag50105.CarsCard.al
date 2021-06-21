@@ -65,8 +65,12 @@ page 50105 "Cars Card"
                 {
                     ToolTip = 'Specifies the value of the Mileage field';
                     ApplicationArea = All;
-
-
+                }
+                field("Car Discount"; Rec."Car Discount")
+                {
+                    Caption = 'Discount';
+                    ToolTip = 'Specifies the value of the Car Discount field';
+                    ApplicationArea = All;
                 }
             }
         }

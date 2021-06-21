@@ -54,6 +54,11 @@ tableextension 50100 "Car" extends Item
             Caption = 'Trunk Vol./Bags';
             DataClassification = CustomerContent;
         }
+        field(50110; "Car Discount"; Decimal)
+        {
+            Caption = 'Car Discount';
+            DataClassification = CustomerContent;
+        }
 
     }
 

@@ -26,19 +26,25 @@ page 50101 "Rental Order Line Part"
                     ToolTip = 'Specifies the value of the Item No. field';
                     ApplicationArea = All;
                 }
-                field(Name; Rec."Item Description")
+                field("Car Description"; Rec."Car Description")
                 {
-                    ToolTip = 'Specifies the value of the Name field';
-                    ApplicationArea = All;
-                }
-                field(Quantity; Rec.Quantity)
-                {
-                    ToolTip = 'Specifies the value of the Quantity field';
+                    ToolTip = 'Specifies the value of the "Car Description" field';
                     ApplicationArea = All;
                 }
                 field(Price; Rec."Price a day")
                 {
                     ToolTip = 'Specifies the value of the Price field';
+                    ApplicationArea = All;
+                }
+                field("Days Amt."; Rec."Days Amt.")
+                {
+                    ToolTip = 'Specifies the value of the Days Amt. field';
+                    ApplicationArea = All;
+                }
+                field("Total Discount"; Rec."Total Discount")
+                {
+                    Caption = 'Total Discount';
+                    ToolTip = 'Specifies the value of the Total Discount field';
                     ApplicationArea = All;
                 }
                 field("Line Amount"; Rec."Line Amount")

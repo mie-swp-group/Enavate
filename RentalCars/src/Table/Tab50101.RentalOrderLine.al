@@ -11,7 +11,7 @@ table 50101 "Rental Order Line"
         {
             Caption = 'Order No.';
             DataClassification = CustomerContent;
-            TableRelation = "Rental Order Header";
+            TableRelation = "Rental Order";
             Editable = false;
         }
         field(2; "Line No."; Code[20])
@@ -29,16 +29,16 @@ table 50101 "Rental Order Line"
                 CopyFormItem();
             end;
         }
-        field(4; "Item Description"; Text[100])
+        field(4; "Car Description"; Text[100])
         {
-            Caption = 'Item Description';
+            Caption = 'Car Description';
             FieldClass = FlowField;
-            CalcFormula = lookup(Item.Description where("No." = field("Item No.")));
+            CalcFormula = lookup(Item."Model,Year" where("No." = field("Item No.")));
             Editable = false;
         }
-        field(5; Quantity; Integer)
+        field(5; "Days Amt."; Integer)
         {
-            Caption = 'Quantity';
+            Caption = 'Days Amt.';
             DataClassification = CustomerContent;
             trigger OnValidate()
             begin
@@ -51,7 +51,12 @@ table 50101 "Rental Order Line"
             Caption = 'Price a day';
             DataClassification = CustomerContent;
         }
-        field(7; "Line Amount"; Decimal)
+        field(7; "Total Discount"; Decimal)
+        {
+            Caption = 'Total Discount';
+            DataClassification = CustomerContent;
+        }
+        field(8; "Line Amount"; Decimal)
         {
             Caption = 'Total Amount';
             DataClassification = CustomerContent;
@@ -66,7 +71,7 @@ table 50101 "Rental Order Line"
     }
     local procedure UpdateLineAmount()
     begin
-        Rec.Validate("Line Amount", Quantity * "Price a day");
+        Rec.Validate("Line Amount", "Days Amt." * "Price a day");
     end;
 
     local procedure CopyFormItem()

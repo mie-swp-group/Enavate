@@ -71,6 +71,12 @@ page 50104 "Cars"
                     ToolTip = 'Specifies the value of the Unit Price field';
                     ApplicationArea = All;
                 }
+                field("Car Discount"; Rec."Car Discount")
+                {
+                    Caption = 'Discount';
+                    ToolTip = 'Specifies the value of the Car Discount field';
+                    ApplicationArea = All;
+                }
             }
         }
     }

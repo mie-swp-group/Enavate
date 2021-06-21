@@ -1,9 +1,9 @@
-table 50100 "Rental Order Header"
+table 50100 "Rental Order"
 {
-    Caption = 'Rental Order Header';
+    Caption = 'Rental Order';
     DataClassification = CustomerContent;
-    LookupPageId = "Rental Order Header";
-    DrillDownPageId = "Rental Order Header";
+    LookupPageId = "Rental Order";
+    DrillDownPageId = "Rental Order";
     fields
     {
         field(1; "No."; Code[20])
@@ -26,12 +26,12 @@ table 50100 "Rental Order Header"
             TableRelation = "Salesperson/Purchaser"."No.";
 
         }
-        field(3; "Customer No."; Code[20])
-        {
-            Caption = 'Customer No.';
-            DataClassification = CustomerContent;
-            TableRelation = Customer;
-        }
+        // field(3; "Customer No."; Code[20])
+        // {
+        //     Caption = 'Customer No.';
+        //     DataClassification = CustomerContent;
+        //     TableRelation = Customer;
+        // }
         field(4; "Posting Date"; Date)
         {
             Caption = 'Posting Date';
@@ -40,10 +40,10 @@ table 50100 "Rental Order Header"
         field(5; "Customer Name"; Text[100])
         {
             Caption = 'Customer Name';
-            //     Editable = false;
-            //     FieldClass = FlowField;
-            //     CalcFormula = Lookup(Customer.Name WHERE("No." = field("Customer No.")));
-            //TableRelation = Customer.Name;
+            // Editable = false;
+            // FieldClass = FlowField;
+            //CalcFormula = Lookup(Customer.Name WHERE("No." = field("Customer No.")));
+            TableRelation = Customer.Name;
         }
         field(6; "No. Series"; Code[20])
         {

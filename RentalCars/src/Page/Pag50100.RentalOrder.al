@@ -1,8 +1,8 @@
-page 50100 "Rental Order Header"
+page 50100 "Rental Order"
 {
-    Caption = 'Rental Order Header';
+    Caption = 'Rental Order';
     PageType = List;
-    SourceTable = "Rental Order Header";
+    SourceTable = "Rental Order";
     CardPageId = "Rental Order Card";
     UsageCategory = Lists;
     ApplicationArea = All;
@@ -23,11 +23,11 @@ page 50100 "Rental Order Header"
                     ToolTip = 'Specifies the value of the Salesperson No. field';
                     ApplicationArea = All;
                 }
-                field("Customer No."; Rec."Customer No.")
-                {
-                    ToolTip = 'Specifies the value of the Customer No. field';
-                    ApplicationArea = All;
-                }
+                // field("Customer No."; Rec."Customer No.")
+                // {
+                //     ToolTip = 'Specifies the value of the Customer No. field';
+                //     ApplicationArea = All;
+                // }
                 field("Posting Date"; Rec."Posting Date")
                 {
                     ToolTip = 'Specifies the value of the Posting Date field';
