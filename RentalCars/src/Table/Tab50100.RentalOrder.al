@@ -15,7 +15,7 @@ table 50100 "Rental Order"
                 if "No." <> xRec."No." then begin
                     GetRentalSetup();//!
                     NoSeriesMgt.TestManual(GetNoSeriesCode());//!
-                    "No. Series" := '';
+                                                              // "No. Series" := '';
                 end;
             end;
         }
@@ -26,12 +26,12 @@ table 50100 "Rental Order"
             TableRelation = "Salesperson/Purchaser"."No.";
 
         }
-        // field(3; "Customer No."; Code[20])
-        // {
-        //     Caption = 'Customer No.';
-        //     DataClassification = CustomerContent;
-        //     TableRelation = Customer;
-        // }
+        field(3; "Customer No."; Code[20])
+        {
+            Caption = 'Customer No.';
+            DataClassification = CustomerContent;
+            TableRelation = Customer;
+        }
         field(4; "Posting Date"; Date)
         {
             Caption = 'Posting Date';
@@ -44,6 +44,15 @@ table 50100 "Rental Order"
             // FieldClass = FlowField;
             //CalcFormula = Lookup(Customer.Name WHERE("No." = field("Customer No.")));
             TableRelation = Customer.Name;
+            ValidateTableRelation = false;
+            trigger OnLookup()
+            var
+                Customer: Record Customer;
+            begin
+                Customer.Get();
+                Validate("Customer No.");
+
+            end;
         }
         field(6; "No. Series"; Code[20])
         {
@@ -68,7 +77,7 @@ table 50100 "Rental Order"
 
     procedure InitInsert()
     var
-    // IsHandled: Boolean;
+    //  IsHandled: Boolean;
     begin
         if "No." = '' then begin
             TestNoSeries();//!
@@ -87,13 +96,14 @@ table 50100 "Rental Order"
     begin
         if RentalSetup.Get() then
             exit;
-        // RentalSetup.Insert(true);
+        RentalSetup.Init();
+        RentalSetup.Insert(true);
         Commit();
     end;
 
     procedure GetNoSeriesCode(): Code[20]
     var
-    // NoSeriesCode: Code[20];
+    //   NoSeriesCode: Code[20];
     begin
         exit(NoSeriesMgt.GetNoSeriesWithCheck(RentalSetup."Order Nos.", false, "No. Series"));
     end;

@@ -5,7 +5,7 @@ page 50103 "Rental Order Line"
     SourceTable = "Rental Order Line";
     UsageCategory = Administration;
     ApplicationArea = All;
-    Editable = false;
+    // Editable = false;
 
     layout
     {

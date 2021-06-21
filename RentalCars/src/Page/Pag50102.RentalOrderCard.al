@@ -17,7 +17,7 @@ page 50102 "Rental Order Card"
                 {
                     ToolTip = 'Specifies the value of the No. field';
                     ApplicationArea = All;
-                    Editable = false;
+                    // Editable = false;
                 }
                 // field("Customer No."; Rec."Customer No.")
                 // {
