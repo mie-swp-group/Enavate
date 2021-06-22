@@ -2,8 +2,8 @@ table 50100 "Rental Order"
 {
     Caption = 'Rental Order';
     DataClassification = CustomerContent;
-    LookupPageId = "Rental Order";
-    DrillDownPageId = "Rental Order";
+    LookupPageId = "Rental Orders";
+    DrillDownPageId = "Rental Orders";
     fields
     {
         field(1; "No."; Code[20])
@@ -47,10 +47,10 @@ table 50100 "Rental Order"
             ValidateTableRelation = false;
             trigger OnLookup()
             var
-                Customer: Record Customer;
+            //Customer: Record Customer;
             begin
-                Customer.Get();
-                Validate("Customer No.");
+                //Customer.Get();
+                //Validate("Customer No.");
 
             end;
         }

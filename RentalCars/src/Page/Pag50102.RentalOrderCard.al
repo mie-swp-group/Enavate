@@ -29,6 +29,12 @@ page 50102 "Rental Order Card"
                 //         CurrPage.Update(true);
                 //     end;
                 // }
+
+                field("Customer No."; Rec."Customer No.")
+                {
+                    ToolTip = 'Specifies the value of the Customer No. field';
+                    ApplicationArea = All;
+                }
                 field("Customer Name"; Rec."Customer Name")
                 {
                     ApplicationArea = Basic, Suite;
