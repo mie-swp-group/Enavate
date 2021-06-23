@@ -19,9 +19,15 @@ page 50104 "Cars"
                     ToolTip = 'Specifies the value of the No. field';
                     ApplicationArea = All;
                 }
-                field("Model,Year"; Rec."Model,Year")
+                // field("Model,Year"; Rec."Model,Year")
+                // {
+                //     ToolTip = 'Specifies the value of the Model,Year field';
+                //     ApplicationArea = All;
+                // }
+                field("Description"; Rec."Description")
                 {
-                    ToolTip = 'Specifies the value of the Model,Year field';
+                    Caption = 'Model,Year';
+                    ToolTip = 'Specifies the value of the Description field';
                     ApplicationArea = All;
                 }
                 field(Color; Rec.Color)

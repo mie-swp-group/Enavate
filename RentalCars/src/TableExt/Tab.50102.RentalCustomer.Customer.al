@@ -2,9 +2,9 @@ tableextension 50102 "Rental Customer" extends Customer
 {
     fields
     {
-        field(50100; Discount; Decimal)
+        field(50100; "Rental Discount"; Decimal)
         {
-            Caption = 'Discount';
+            Caption = 'Rental Discount';
             DataClassification = CustomerContent;
 
         }

@@ -27,8 +27,6 @@ pageextension 50106 "RoleCenterExt" extends "Business Manager Role Center"
                     Caption = 'Customers';
                     RunObject = page "Rental Customers";
                 }
-
-
             }
 
         }

@@ -9,13 +9,5 @@ tableextension 50101 "Rental Salesperson" extends "Salesperson/Purchaser"
         }
 
     }
-    keys
-    {
-        key(Key4; "No.")
-        {
-
-        }
-    }
-
 
 }

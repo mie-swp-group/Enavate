@@ -2,13 +2,13 @@ tableextension 50100 "Car" extends Item
 {
     fields
     {
-        field(50100;
-        "Model,Year";
-        Text[50])
-        {
-            Caption = 'Model,Year';
-            DataClassification = CustomerContent;
-        }
+        //field(50100;
+        // "Model,Year";
+        // Text[50])
+        // {
+        //     Caption = 'Model,Year';
+        //     DataClassification = CustomerContent;
+        // }
         field(50101; Color; Text[20])
         {
             Caption = 'Color';

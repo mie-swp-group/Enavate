@@ -21,9 +21,10 @@ page 50101 "Rental Order Line Part"
                     ApplicationArea = All;
                     Visible = false;
                 }
-                field("Item No."; Rec."Item No.")
+                field("Car No."; Rec."Car No.")
                 {
-                    ToolTip = 'Specifies the value of the Item No. field';
+                    Caption = 'Car No.';
+                    ToolTip = 'Specifies the value of the Car No. field';
                     ApplicationArea = All;
                 }
                 field("Car Description"; Rec."Car Description")
@@ -53,7 +54,21 @@ page 50101 "Rental Order Line Part"
                     ApplicationArea = All;
                 }
             }
+            group(Discounts)
+            {
+                // field("Customer Discount"; Rec."Customer Discount")
+                // {
+                //     ToolTip = 'Customer Discount';
+                //     ApplicationArea = All;
+                // }
+                // field("Car Discount"; Rec."Car Discount")
+                // {
+                //     ToolTip = 'Car Discount';
+                //     ApplicationArea = All;
+                // }
+
+            }
+
         }
     }
-
 }

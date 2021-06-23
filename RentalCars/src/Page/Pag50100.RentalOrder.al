@@ -23,11 +23,12 @@ page 50100 "Rental Order"
                     ToolTip = 'Specifies the value of the Salesperson No. field';
                     ApplicationArea = All;
                 }
-                // field("Customer No."; Rec."Customer No.")
-                // {
-                //     ToolTip = 'Specifies the value of the Customer No. field';
-                //     ApplicationArea = All;
-                // }
+                field("Customer No."; Rec."Customer No.")
+                {
+                    ToolTip = 'Specifies the value of the Customer No. field';
+                    ApplicationArea = All;
+                    Visible = false;
+                }
                 field("Posting Date"; Rec."Posting Date")
                 {
                     ToolTip = 'Specifies the value of the Posting Date field';

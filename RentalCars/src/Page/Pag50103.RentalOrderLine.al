@@ -18,7 +18,7 @@ page 50103 "Rental Order Line"
                     ToolTip = 'Specifies the value of the Order No. field';
                     ApplicationArea = All;
                 }
-                field("Item No."; Rec."Item No.")
+                field("Car No."; Rec."Car No.")
                 {
                     ToolTip = 'Specifies the value of the Item No. field';
                     ApplicationArea = All;

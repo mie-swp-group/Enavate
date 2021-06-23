@@ -13,17 +13,17 @@ table 50100 "Rental Order"
             trigger OnValidate()
             begin
                 if "No." <> xRec."No." then begin
-                    GetRentalSetup();//!
-                    NoSeriesMgt.TestManual(GetNoSeriesCode());//!
-                                                              // "No. Series" := '';
+                    GetRentalSetup();
+                    NoSeriesMgt.TestManual(GetNoSeriesCode());
+                    // "No. Series" := '';
                 end;
             end;
         }
-        field(2; "Salesperson Name"; Code[20])
+        field(2; "Salesperson Name"; Code[50])
         {
             Caption = 'Salesperson Name';
             DataClassification = CustomerContent;
-            TableRelation = "Salesperson/Purchaser"."No.";
+            TableRelation = "Salesperson/Purchaser";
 
         }
         field(3; "Customer No."; Code[20])
@@ -40,9 +40,9 @@ table 50100 "Rental Order"
         field(5; "Customer Name"; Text[100])
         {
             Caption = 'Customer Name';
-            // Editable = false;
-            // FieldClass = FlowField;
-            //CalcFormula = Lookup(Customer.Name WHERE("No." = field("Customer No.")));
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = Lookup(Customer.Name WHERE("No." = field("Customer No.")));
             TableRelation = Customer.Name;
             ValidateTableRelation = false;
             trigger OnLookup()

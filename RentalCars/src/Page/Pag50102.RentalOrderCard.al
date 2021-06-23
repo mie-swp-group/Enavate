@@ -19,16 +19,16 @@ page 50102 "Rental Order Card"
                     ApplicationArea = All;
                     // Editable = false;
                 }
-                // field("Customer No."; Rec."Customer No.")
-                // {
-                //     ToolTip = 'Specifies the value of the Customer No. field';
-                //     ApplicationArea = All;
+                field("Customer No."; Rec."Customer No.")
+                {
+                    ToolTip = 'Specifies the value of the Customer No. field';
+                    ApplicationArea = All;
 
-                //     trigger OnValidate()
-                //     begin
-                //         CurrPage.Update(true);
-                //     end;
-                // }
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update(true);
+                    end;
+                }
                 field("Customer Name"; Rec."Customer Name")
                 {
                     ApplicationArea = Basic, Suite;
@@ -43,7 +43,7 @@ page 50102 "Rental Order Card"
                         //  if ApplicationAreaMgmtFacade.IsFoundationEnabled then
                         //     SalesCalcDiscountByType.ApplyDefaultInvoiceDiscount(0, Rec);
 
-                        CurrPage.Update();
+                        // CurrPage.Update();
                     end;
 
                     // trigger OnLookup(var Text: Text): Boolean

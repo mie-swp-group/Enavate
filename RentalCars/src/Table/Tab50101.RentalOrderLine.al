@@ -19,7 +19,7 @@ table 50101 "Rental Order Line"
             Caption = 'No.';
             DataClassification = CustomerContent;
         }
-        field(3; "Item No."; Code[20])
+        field(3; "Car No."; Code[20])
         {
             Caption = 'Item No.';
             DataClassification = CustomerContent;
@@ -33,7 +33,7 @@ table 50101 "Rental Order Line"
         {
             Caption = 'Car Description';
             FieldClass = FlowField;
-            CalcFormula = lookup(Item."Model,Year" where("No." = field("Item No.")));
+            CalcFormula = lookup(Item."Description" where("No." = field("Car No.")));
             Editable = false;
         }
         field(5; "Days Amt."; Integer)
@@ -51,15 +51,32 @@ table 50101 "Rental Order Line"
             Caption = 'Price a day';
             DataClassification = CustomerContent;
         }
-        field(7; "Total Discount"; Decimal)
+        // field(7; "Customer Discount"; Decimal)
+        // {
+        //     Caption = 'Customer Discount';
+        //     FieldClass = FlowField;
+        //     CalcFormula = lookup(Customer."Rental Discount" where("No." = field("Rental Order"."Customer No.")));
+        //     Editable = false;
+        // }
+        // field(8; "Car Discount"; Decimal)
+        // {
+        //     Caption = 'Car Discount';
+        //     DataClassification = CustomerContent;
+        // }
+        field(9; "Total Discount"; Decimal)
         {
             Caption = 'Total Discount';
             DataClassification = CustomerContent;
+            trigger OnValidate()
+            begin
+                UpdateLineAmount();
+            end;
         }
-        field(8; "Line Amount"; Decimal)
+        field(10; "Line Amount"; Decimal)
         {
             Caption = 'Total Amount';
             DataClassification = CustomerContent;
+            Editable = false;
         }
     }
     keys
@@ -69,19 +86,19 @@ table 50101 "Rental Order Line"
             Clustered = true;
         }
     }
-    local procedure UpdateLineAmount()
-    begin
-        Rec.Validate("Line Amount", "Days Amt." * "Price a day");
-    end;
 
     local procedure CopyFormItem()
     var
         Item: Record Item;
     begin
-        if "Item No." = '' then
+        if "Car No." = '' then
             exit;
-        Item.Get("Item No.");
+        Item.Get("Car No.");
         Rec.Validate("Price a day", Item."Unit Price");
     end;
 
+    local procedure UpdateLineAmount()
+    begin
+        Rec.Validate("Line Amount", "Days Amt." * "Price a day" - ("Days Amt." * "Price a day" * "Total Discount" / 100));
+    end;
 }

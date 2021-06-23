@@ -19,7 +19,7 @@ page 50106 "Rental Customers"
                     ToolTip = 'Specifies the value of the No. field';
                     ApplicationArea = All;
                 }
-                field(Contact; Rec.Contact)
+                field(Name; Rec.Name)
                 {
                     ToolTip = 'Specifies the value of the Contact field';
                     ApplicationArea = All;
@@ -30,7 +30,7 @@ page 50106 "Rental Customers"
                     ToolTip = 'Specifies the value of the Phone No. field';
                     ApplicationArea = All;
                 }
-                field(Discount; Rec.Discount)
+                field("Rental Discount"; Rec."Rental Discount")
                 {
                     ToolTip = 'Specifies the value of the Discount field';
                     ApplicationArea = All;
